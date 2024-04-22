@@ -1,0 +1,113 @@
+{
+    "Title": "My Story",
+    "Credits": "Created by Joseph Gonzalez",
+    "InitialLocation": "start",
+    "Locations": {
+      "start": {
+        "Body": "You are at the beginning of the story.",
+        "Choices": [
+          {
+            "Text": "Go to the forest",
+            "Target": "forest"
+          }
+        ]
+      },
+      "forest": {
+        "Body": "You are in a dense forest. There is a cellar door that is locked shut.",
+        "Choices": [
+          {
+            "Text": "Explore deeper",
+            "Target": "cave"
+          }
+        ],
+        "secret": 
+          {
+            "Text": "Unlock the cellar door",
+            "Target": "secret_cellar"   
+          }
+      },
+      "cave": {
+        "Body": "You are in a dark cave. There is a mysterious button on the side of the wall.",
+        "Choices": [
+          {
+            "Text": "Search for treasure",
+            "Target": "treasure"
+          },
+          {
+            "Text": "Return to the forest",
+            "Target": "forest"
+          },
+          {
+            "Text":"Press the button",
+            "Target":"opening"
+          }
+        ]
+      },
+      "opening": {
+        "Body": "You hear loud whirring noises that come to a halt after a bit.",
+        "Choices": [
+          {
+            "Text": "Go back to the cave",
+            "Target": "cave"
+          }
+        ]
+      },
+      "treasure": {
+        "Body": "You found a treasure chest.",
+        "Choices": [
+          {
+            "Text": "Open the chest",
+            "Target": "treasure_unlocked"
+          }
+        ]
+      },
+      "Key Get": {
+        "Body": "You got the key",
+        "Choices": [
+          {
+            "Text": "Go back to the cave",
+            "Target": "cave"
+          }
+        ]
+      },
+      "treasure_unlocked": {
+        "Body": "You open the chest and find a shiny key inside.",
+        "Choices": [
+          {
+            "Text": "Take the key",
+            "Target": "Key Get"
+          },
+          {
+            "Text": "Go back to the cave",
+            "Target": "cave" 
+          }
+        ]
+      },
+      "secret_cellar": {
+        "Body": "It leads to a damp dirt basement area that does not look too interesting.",
+        "Choices": [
+          {
+            "Text": "Return to the forest",
+            "Target": "forest"
+          }
+        ],
+        "secret":  
+          {
+            "Text": "Go into the secret door that is now opened",
+            "Target": "secret_room"
+          }
+      },
+      "secret_room": {
+        "Body": "The room is full of gold and treasure.",
+        "Choices": [
+          {
+            "Text": "Take the gold and go home",
+            "Target": "The End."
+          }
+        ]
+      }
+    },
+    "The end.":{
+        "Body": "The End."
+    }
+  }
